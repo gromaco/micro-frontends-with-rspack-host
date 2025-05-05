@@ -21,7 +21,7 @@ without Module Federation. It consists of three applications:
 ### Start the app
 
 ```bash
-npm run install:deps
+npm run install
 npm run dev
 ```
 
