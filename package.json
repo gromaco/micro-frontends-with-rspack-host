@@ -1,0 +1,27 @@
+{
+  "name": "micro-frontends-with-rspack-host",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "rsbuild_host",
+    "rsbuild_remote",
+    "vite_remote_mf"
+  ],
+  "scripts": {
+    "install:deps": "npm install --workspaces",
+    "dev": "run-p dev:rsbuild_host dev:rsbuild_remote dev:vite_remote_mf dev:vite_remote_mf_adapter",
+    "dev:rsbuild_host": "npm --workspace rsbuild_host run dev",
+    "dev:rsbuild_remote": "npm --workspace rsbuild_remote run dev",
+    "dev:vite_remote_mf": "npm --workspace vite_remote_mf run dev",
+    "dev:vite_remote_mf_adapter": "npm --workspace vite_remote_mf run dev:adapter",
+    "reset": "npx rimraf **/node_modules"
+  },
+  "author": {
+    "name": "Roman Grynyshyn",
+    "email": "roman.grynyshyn@gmail.com",
+    "url": "https://github.com/gromaco"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
