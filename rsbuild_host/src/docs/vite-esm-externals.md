@@ -15,7 +15,7 @@ dependency, but the code is loaded at runtime from a specified URL.
 export default defineConfig({
   output: {
     externals: {
-      'externals-vite-esm': 'module http://localhost:5002/mf-adapter.js',
+      'externals-vite-esm': 'module http://localhost:5002/src/mf-adapter.js',
     },
   },
 });

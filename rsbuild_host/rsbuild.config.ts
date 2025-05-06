@@ -11,7 +11,7 @@ export default defineConfig({
   },
   output: {
     externals: {
-      'externals-vite-esm': 'module http://localhost:5002/mf-adapter.js',
+      'externals-vite-esm': 'module http://localhost:3003/src/mf-adapter.js',
     },
   },
   tools: {

@@ -5,16 +5,17 @@
   "workspaces": [
     "rsbuild_host",
     "rsbuild_remote",
+    "vite_remote_esm",
     "vite_remote_mf"
   ],
   "scripts": {
     "install:deps": "npm install --workspaces",
-    "dev": "run-p dev:rsbuild_host dev:rsbuild_remote dev:vite_remote_mf dev:vite_remote_mf_adapter",
+    "dev": "run-p dev:rsbuild_host dev:rsbuild_remote dev:vite_remote_mf dev:vite_remote_esm",
     "dev:rsbuild_host": "npm --workspace rsbuild_host run dev",
     "dev:rsbuild_remote": "npm --workspace rsbuild_remote run dev",
     "dev:vite_remote_mf": "npm --workspace vite_remote_mf run dev",
-    "dev:vite_remote_mf_adapter": "npm --workspace vite_remote_mf run dev:adapter",
-    "reset": "npx rimraf **/node_modules"
+    "dev:vite_remote_esm": "npm --workspace vite_remote_esm run dev",
+    "reset": "npx rimraf --glob '**/node_modules' '**/dist' "
   },
   "author": {
     "name": "Roman Grynyshyn",

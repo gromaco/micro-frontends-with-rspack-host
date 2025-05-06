@@ -1,5 +1,5 @@
 {
-  "name": "vite_remote_mf",
+  "name": "vite_remote_esm",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:watch": "vite build --watch",
+    "serve:build": "npx serve dist -l 3003 --cors",
+    "dev:lib": "npx concurrently \"npm run build:watch\" \"npm run serve:build\""
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.13.1",
-    "@module-federation/vite": "^1.2.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.5.3"

@@ -7,7 +7,7 @@ export const ViteEsmWrapper = (props: { routerBasename?: string; }) => {
   const containerRef = useRemoteModule(
       async () => {
         // @ts-ignore
-        return await import(/* webpackIgnore: true */ 'http://localhost:5002/mf-adapter.js') as RemoteAdapter;
+        return await import(/* webpackIgnore: true */ 'http://localhost:3003/src/mf-adapter.js') as RemoteAdapter;
       },
       'ESM Vite',
       props
