@@ -1,14 +1,16 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
 
 const roots = new Map();
 
-export function render(container: HTMLElement, props: object = {}) {
-  if (!container) throw new Error('No container provided for remote render');
+export async function render(container: HTMLElement, props: object = {}) {
+  if (!container) throw new Error('No container provided for remote render 111111');
 
   const root = ReactDOM.createRoot(container);
   roots.set(container, root);
-  console.log('Calling render for:', container);
+  console.log('Calling render for1:', container);
+
+  // This dynamic import enables styles injection and modulepreload optimization for the entrypoint
+  const {default: App} = await import('./App');
   root.render(<App {...props} />);
 }
 
@@ -21,4 +23,3 @@ export function unmount(container: HTMLElement) {
     roots.delete(container);
   }
 }
-

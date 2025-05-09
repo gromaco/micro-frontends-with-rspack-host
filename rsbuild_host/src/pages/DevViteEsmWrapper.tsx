@@ -2,7 +2,7 @@ import {RemoteAdapter} from "../types.ts";
 import {useRemoteModule} from "../hooks/useRemoteModule.tsx";
 import {DocViewer} from "../DocViewer.tsx";
 
-export const ViteEsmWrapper = (props: { routerBasename?: string; }) => {
+export const DevViteEsmWrapper = (props: { routerBasename?: string; }) => {
 
   const containerRef = useRemoteModule(
       async () => {
@@ -16,7 +16,7 @@ export const ViteEsmWrapper = (props: { routerBasename?: string; }) => {
 
   return <>
     <h1 className={'title'}>
-      Vite as ESM Module without MF
+      Vite as ESM Module without MF consumed from the Vite dev server imitating development flow
     </h1>
     <DocViewer docName={'vite-esm'}/>
     <div ref={containerRef}/>

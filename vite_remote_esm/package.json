@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "build:watch": "vite build --watch",
     "serve:build": "npx serve dist -l 3003 --cors",
-    "dev:lib": "npx concurrently \"npm run build:watch\" \"npm run serve:build\""
+    "preview:watch": "npx concurrently \"npm run build:watch\" \"npm run preview\""
   },
   "dependencies": {
     "react": "^19.0.0",

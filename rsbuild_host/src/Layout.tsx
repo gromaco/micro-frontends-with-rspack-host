@@ -13,8 +13,11 @@ export const Layout = () => {
           <NavLink to="/vite_esm_externals" end>
             Externals Vite ESM
           </NavLink>
-          <NavLink to="/vite_esm" end>
-            Vite ESM
+          <NavLink to="/vite_esm_dev" end>
+            Dev Vite ESM
+          </NavLink>
+          <NavLink to="/vite_esm_prod" end>
+            Prod Vite ESM
           </NavLink>
           <NavLink to="/vite_remote" end>
             Vite Remote MF

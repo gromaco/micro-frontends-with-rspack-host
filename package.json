@@ -10,11 +10,12 @@
   ],
   "scripts": {
     "install:deps": "npm install --workspaces",
-    "dev": "run-p dev:rsbuild_host dev:rsbuild_remote dev:vite_remote_mf dev:vite_remote_esm",
+    "dev": "run-p dev:rsbuild_host dev:rsbuild_remote dev:vite_remote_mf dev:vite_remote_esm_dev dev:vite_remote_esm_prod",
     "dev:rsbuild_host": "npm --workspace rsbuild_host run dev",
     "dev:rsbuild_remote": "npm --workspace rsbuild_remote run dev",
     "dev:vite_remote_mf": "npm --workspace vite_remote_mf run dev",
-    "dev:vite_remote_esm": "npm --workspace vite_remote_esm run dev",
+    "dev:vite_remote_esm_dev": "npm --workspace vite_remote_esm run dev",
+    "dev:vite_remote_esm_prod": "npm --workspace vite_remote_esm run preview:watch",
     "reset": "npx rimraf --glob '**/node_modules' '**/dist' "
   },
   "author": {
